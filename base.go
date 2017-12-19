@@ -107,7 +107,7 @@ func (api *API) callBytes(method string, params interface{}) (b []byte, err erro
 
 	b, err = ioutil.ReadAll(res.Body)
 	fmt.Println("masumoto")
-	fmt.Println(b)
+	fmt.Println(string(b))
 	api.printf("Response (%d): %s", res.StatusCode, b)
 	return
 }
