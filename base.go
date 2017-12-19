@@ -106,6 +106,8 @@ func (api *API) callBytes(method string, params interface{}) (b []byte, err erro
 	defer res.Body.Close()
 
 	b, err = ioutil.ReadAll(res.Body)
+	fmt.Println("masumoto")
+	fmt.Println(b)
 	api.printf("Response (%d): %s", res.StatusCode, b)
 	return
 }
